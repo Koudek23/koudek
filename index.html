@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koudek – Unique Lifestyle Shop</title>
+    <style>
+        :root {
+            --primary: #111111;
+            --accent: #c5a880;
+            --bg-light: #f9f9f8;
+            --white: #ffffff;
+            --text-muted: #666666;
+            --border-color: #e5e5e5;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--white);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: Georgia, serif;
+            font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .announcement-bar {
+            background-color: var(--primary);
+            color: var(--white);
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 0.5rem 1rem;
+            text-transform: uppercase;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: Georgia, serif;
+        }
+
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), #222;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 0.8rem 2.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.8rem;
+            border: 1px solid var(--white);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        .btn-dark {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .btn-dark:hover {
+            background-color: transparent;
+            color: var(--primary);
+        }
+
+        .coming-soon-section {
+            padding: 7rem 0;
+            background-color: var(--bg-light);
+            text-align: center;
+        }
+
+        .coming-soon-container {
+            max-width: 650px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 3.5rem 2.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .coming-soon-container h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .coming-soon-container p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .story-section {
+            padding: 6rem 0;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .story-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .story-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            line-height: 1.7;
+        }
+
+        .story-image-placeholder {
+            height: 450px;
+            background-color: #eaeaea;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 0 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #888888;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+        }
+
+        @media(max-width: 768px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="announcement-bar">
+        Kostenloser Versand ab 50 € Bestellwert • Entdecke Koudek
+    </div>
+
+    <header>
+        <div class="container navbar">
+            <ul class="nav-links">
+                <li><a href="#">Startseite</a></li>
+                <li><a href="#story">Über uns</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+            <a href="#" class="logo">Koudek</a>
+            <div style="font-size: 0.9rem; font-weight: 500;">Lifestyle</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Einzigartig. Stilvoll. Für dich.</h1>
+            <p>Dein Lifestyle-Shop für handverlesene Lieblingsstücke.</p>
+            <a href="#coming-soon" class="btn">Entdecken</a>
+        </div>
+    </section>
+
+    <section id="coming-soon" class="coming-soon-section">
+        <div class="container">
+            <div class="coming-soon-container">
+                <h2>Produktkollektion folgt in Kürze</h2>
+                <p>Hier entsteht in Kürze dein Shop-Sortiment. Die ersten Produkte werden bald hinzugefügt!</p>
+                <a href="#story" class="btn btn-dark">Unsere Geschichte</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-text">
+                    <h2>Die Geschichte von Koudek</h2>
+                    <p>Die Geschichte von Koudek begann an einem regnerischen Nachmittag am Küchentisch, getrieben von dem Wunsch, dem Alltag mehr Ästhetik und Qualität zu verleihen.</p>
+                    <p>Jedes Detail unseres Schaffens spiegelt die Leidenschaft für durchdachtes Design wider. Wir glauben daran, dass die Dinge, mit denen wir uns umgeben, eine eigene Geschichte erzählen sollten.</p>
+                </div>
+                <div class="story-image-placeholder">
+                    Bild-Platzhalter
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt">
+        <div class="container">
+            <h3 class="logo" style="margin-bottom: 1rem;">Koudek</h3>
+            <p>Fragen? Schreib uns an: support@koudek.shop</p>
+            <p>&copy; 2026 Koudek. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
